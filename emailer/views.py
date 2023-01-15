@@ -12,7 +12,7 @@ def index(request):
         email_body = request.POST.get("email_body")
         print(email_body)
         send_mail(
-        subject = 'A cool subject',message = 'A stunning message',from_email = "testproject@github.com",
+        subject = 'Automated Email Test',message = email_body,from_email = "testproject@github.com",
         recipient_list = [email_list])
 
 
