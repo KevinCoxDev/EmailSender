@@ -7,17 +7,26 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossorigin="anonymous">
 </head>
-<body>
-<div class="card" style="margin:20%;">
+<body class="bg-primary">
+<div class="card text-center m-5">
     <h5 class="card-header">Email Sending Application</h5>
     <div class="card-body">
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">Enter email text body in the box below</p>
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="#" class="btn btn-primary float-right">Action</a>
-        </div>
+
+        <form>
+            <div class="form-group ms-5 me-5">
+                <textarea placeholder="Please enter body of text here" class="form-control mt-2 mb-2" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="Enter destination email(s)" multiple>
+                <small id="emailHelp" class="form-text text-muted">Multiple values should be entered as a comma
+                    separated list</small>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
-
 </body>
 </html>
