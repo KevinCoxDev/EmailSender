@@ -14,10 +14,11 @@
         <p class="card-text">Enter email text body in the box below</p>
 
 
-        <form>
+        <form method="POST">
+            {% csrf_token %}
             <div class="form-group ms-5 me-5">
-                <textarea placeholder="Please enter body of text here" class="form-control mt-2 mb-2" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+                <textarea placeholder="Please enter body of text here" name="email_body" class="form-control mt-2 mb-2" id="email_body" rows="3"></textarea>
+                <input type="email" class="form-control " id="email_input" name="email_input" aria-describedby="emailHelp"
                        placeholder="Enter destination email(s)" multiple>
                 <small id="emailHelp" class="form-text text-muted">Multiple values should be entered as a comma
                     separated list</small>
